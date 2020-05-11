@@ -1,0 +1,17 @@
+fbprophet
+jupyter
+jupyterlab
+matplotlib
+networkx
+numpy
+pandas
+plotly
+pymc3
+pyramid
+torch
+scikit-learn
+scipy
+seaborn
+statsmodels
+tensorflow
+tensorflow-probability

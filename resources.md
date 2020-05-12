@@ -10,6 +10,7 @@
 - [Applied Time Series Analysis for Fisheries and Environmental Sciences, E. E. Holmes, M. D. Scheuerell, and E. J. Ward](https://nwfsc-timeseries.github.io/atsa-labs/)
 - [Forecasting: Principles and Practice, Rob J Hyndman and George Athanasopoulos](https://otexts.com/fpp2/)
 - [Gaussian Processes for Machine Learning, Carl Edward Rasmussen and Christopher K. I. Williams](http://gaussianprocess.org/gpml/)
+- [Introduction to Algorithmic Marketing, Ilya Katsov](https://algorithmicweb.files.wordpress.com/2018/07/algorithmic-marketing-ai-for-marketing-operations-r1-7g.pdf)
 - [Introduction to Time Series and Forecasting, Peter J. Brockwell and Richard A. Davis](http://home.iitj.ac.in/~parmod/document/introduction%20time%20series.pdf)
 - [Little Book of R for Time Series, Avril Coghlan](https://a-little-book-of-r-for-time-series.readthedocs.io/en/latest/#)
 - [Statistical Rethinking, Richard McElreath](https://xcelab.net/rm/statistical-rethinking/)
@@ -30,6 +31,7 @@
 - [CausalImpact (Google)](https://github.com/google/CausalImpact)
 - [deep-learning-with-python-notebooks](https://github.com/fchollet/deep-learning-with-python-notebooks)
 - [deep-learning-with-r-notebooks](https://github.com/jjallaire/deep-learning-with-r-notebooks)
+- [tensor-house (Introduction to Algorithmic Marketing)](https://github.com/ikatsov/tensor-house)
 - [SHAP](https://github.com/slundberg/shap)
 
 ## Videos

@@ -4,6 +4,7 @@
 
 - [Forecasting at Scale (Facebook Prophet)](https://peerj.com/preprints/3190.pdf)
 - [Gaussian Processes for Timeseries Modelling](http://www.robots.ox.ac.uk/~sjrob/Pubs/philTransA_2012.pdf)
+- [Neural forecasting: Introduction and Literature Overview, Amazon Research](https://arxiv.org/pdf/2004.10240.pdf)
 
 ## Books
 
@@ -25,6 +26,7 @@
 - [https://petolau.github.io/](https://petolau.github.io/)
 - [Intro CausalImpact](https://google.github.io/CausalImpact/CausalImpact.html)
 - [Structural Time Series modeling in TensorFlow Probability](https://blog.tensorflow.org/2019/03/structural-time-series-modeling-in.html)
+- [Time Series Analysis and Forecasting with ARIMA (Python)](https://kanoki.org/2020/04/30/time-series-analysis-and-forecasting-with-arima-python/)
 
 ## Repositories 
 

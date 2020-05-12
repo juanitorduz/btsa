@@ -21,3 +21,6 @@ ENV PATH $CONDA_DIR/envs/${conda_env}/bin:$PATH
 
 # If you want this environment to be the default one, uncomment the following line:
 ENV CONDA_DEFAULT_ENV ${conda_env}
+
+COPY data /home/$NB_USER/work/data
+COPY python /home/$NB_USER/work/python

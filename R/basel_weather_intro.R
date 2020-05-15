@@ -6,7 +6,7 @@ library("ggplot2")
 library("here")
 
 #Set the working directory
-setwd(here())
+setwd(paste0(here(),"/R"))
 
 # Read the weather data
 weather = read.csv("../data/basel_weather.csv")

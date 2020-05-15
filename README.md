@@ -37,6 +37,7 @@ As we want to make the code reproducible, here are some options to manage depend
 
 > Visiting `http://<hostname>:10000/?token=<token>` in a browser loads the Jupyter Notebook dashboard page, where `hostname` is the name of the computer running docker and `token` is the secret token printed in the console.
 
+  ---
 ### R Environment
 
 - From the root (btsa) directory, with R installed, run the following command: Rscript renv/activate.R

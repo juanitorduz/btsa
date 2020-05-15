@@ -2,6 +2,9 @@
 
 This repository contains resources of the *Berlin Time Series Analysis* [meetup](https://www.meetup.com/Berlin-Time-Series-Analysis-Meetup/). You can find a list of references on the [resources](https://github.com/juanitorduz/btsa/blob/master/resources.md) section (which we will continuously update).
 
+<img src="python/fundamentals/images/basel_daily_gf.png">
+
+
 ---
 ## Environment  
 

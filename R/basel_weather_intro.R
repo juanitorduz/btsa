@@ -89,10 +89,11 @@ ggplot(daily_df) +
 
 
 # Apply a gaussian filters as smoothers
-daily_df$temp_gf_30 = ksmooth(x=daily_df$date, y=daily_df$temperature, bandwidth = 30, kernel="normal")$y
-daily_df$temp_gf_90 = ksmooth(x=daily_df$date, y=daily_df$temperature, bandwidth = 90, kernel="normal")$y
+daily_df$temp_gf_30 = ksmooth(x=daily_df$date, y=daily_df$temperature, bandwidth = 60, kernel="normal")$y
+daily_df$temp_gf_90 = ksmooth(x=daily_df$date, y=daily_df$temperature, bandwidth = 180, kernel="normal")$y
 
 
+# Plot the smoothed functions
 ggplot(daily_df) + 
   geom_line(mapping=aes(x=date, y=temperature), col="blue") + 
   geom_line(mapping=aes(x=date, y=temp_gf_30), col="darkred")

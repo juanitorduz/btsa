@@ -58,7 +58,8 @@ ggplot(daily_df) +
 # Visualise the seasonality using a cyclical transformation and a spider plot.
 ggplot(daily_df) + 
   geom_line(mapping=aes(x=day_of_year, y=temperature), col="blue") +
-  coord_polar()
+  coord_polar() + 
+  ggtitle("Yearly Seasonality")
   
 # Create a function for calculating the moving average
 moving_average = function(x, k = 14){

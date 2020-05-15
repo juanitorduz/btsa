@@ -134,3 +134,4 @@ dmypy.json
 
 #vscode
 .vscode
+.Rproj.user

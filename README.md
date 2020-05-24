@@ -6,6 +6,10 @@ This repository contains resources of the *Berlin Time Series Analysis* [meetup]
 
 
 ---
+
+**Important:** Make sure you read the [Code of Conduct](https://github.com/juanitorduz/btsa/blob/master/code_of_conduct.md). 
+
+---
 ## Environment  
 
 As we want to make the code reproducible, here are some options to manage dependencies (choose R or Python as preferred):

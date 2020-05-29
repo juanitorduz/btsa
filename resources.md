@@ -30,6 +30,7 @@
 
 ## Repositories 
 
+- [atspy](https://github.com/firmai/atspy) (Automated Time Series Models in Python)
 - [CausalImpact (Google)](https://github.com/google/CausalImpact)
 - [deep-learning-with-python-notebooks](https://github.com/fchollet/deep-learning-with-python-notebooks)
 - [deep-learning-with-r-notebooks](https://github.com/jjallaire/deep-learning-with-r-notebooks)

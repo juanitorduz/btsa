@@ -1,13 +1,17 @@
 # Berlin Time Series Analysis (BTSA) Repository
 
-This repository contains resources of the *Berlin Time Series Analysis* [meetup](https://www.meetup.com/Berlin-Time-Series-Analysis-Meetup/). You can find a list of references on the [resources](https://github.com/juanitorduz/btsa/blob/master/resources.md) section (which we will continuously update).
+This repository contains resources of the *Berlin Time Series Analysis* [Meetup](https://www.meetup.com/Berlin-Time-Series-Analysis-Meetup/).
 
 <img src="python/fundamentals/images/basel_daily_gf.png">
 
+---
+## Code of Conduct 
+**Important:** Make sure you read the [Code of Conduct](https://github.com/juanitorduz/btsa/blob/master/code_of_conduct.md). 
 
 ---
+## Resources 
 
-**Important:** Make sure you read the [Code of Conduct](https://github.com/juanitorduz/btsa/blob/master/code_of_conduct.md). 
+You can find a list of references on the [resources](https://github.com/juanitorduz/btsa/blob/master/resources.md) section (which we will continuously update).
 
 ---
 ## Environment  
@@ -41,18 +45,24 @@ As we want to make the code reproducible, here are some options to manage depend
 
 > Visiting `http://<hostname>:10000/?token=<token>` in a browser loads the Jupyter Notebook dashboard page, where `hostname` is the name of the computer running docker and `token` is the secret token printed in the console.
 
-  ---
-### R Environment
+---
+### [R](https://www.r-project.org/) [Environment](https://rstudio.github.io/renv/articles/renv.html)
 
-- From the root (btsa) directory, with R installed, run the following command: Rscript renv/activate.R
+- From the root (`btsa`) directory, with R installed, run the following command: `Rscript renv/activate.R`.
 
-This command will activate the environment and the renv package manager. From there you have two options depending on how you like to edit your projects.
+This command will activate the environment and the [renv package manager](https://github.com/rstudio/renv/). From there you have two options depending on how you like to edit your projects.
 
-Note: This configuration has been tested on R version 3.6.3.
+*Note: This configuration has been tested on R version 3.6.3.*
 
-##### Option 1. Command Line:
-From the root directory type R and hit enter. Then type renv::restore() and respond with 'y' when prompted to install the packages. Your environment is now set up. You can continue writing commands or quit the console, your folder is now set up with the required packages.
+#### Option 1. Command Line:
+From the root directory type R and hit enter. Then type `renv::restore()` and respond with 'y' when prompted to install the packages. Your environment is now set up. You can continue writing commands or quit the console, your folder is now set up with the required packages.
 
-##### Option 2: From R-Studio
-Open an Rstudio session. Go to R-Studio > 'Open Project in New Session'. Navigate to the btsa folder and click open.
-In the console, type renv::restore() to install the necessary packages. Your RStudio session is now configured.
+#### Option 2: From [RStudio](https://rstudio.com/)
+Open an Rstudio session. Go to `RStudio > 'Open Project in New Session'`. Navigate to the btsa folder and click open.
+In the console, type `renv::restore()` to install the necessary packages. Your RStudio session is now configured.
+
+---
+## Contributing 
+We highly encourage to contribute to this repository! 
+  - If you find and error or have a specific request you can create an [Issue](https://guides.github.com/features/issues/).
+  - Add an analysis/experiment using a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 

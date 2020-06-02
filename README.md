@@ -4,6 +4,8 @@ This repository contains resources of the *Berlin Time Series Analysis* [Meetup]
 
 <img src="python/fundamentals/images/basel_daily_gf.png">
 
+**contact:** [berlin.timeseries.analysis@gmail.com](berlin.timeseries.analysis@gmail.com)
+
 ---
 ## Code of Conduct 
 **Important:** Make sure you read the [Code of Conduct](https://github.com/juanitorduz/btsa/blob/master/code_of_conduct.md). 

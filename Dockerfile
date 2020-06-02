@@ -24,3 +24,5 @@ ENV CONDA_DEFAULT_ENV ${conda_env}
 
 COPY data /home/$NB_USER/work/data
 COPY python /home/$NB_USER/work/python
+
+RUN fix-permissions /home/$NB_USER

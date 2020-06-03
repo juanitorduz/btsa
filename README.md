@@ -47,6 +47,8 @@ As we want to make the code reproducible, here are some options to manage depend
 
 > Visiting `http://<hostname>:10000/?token=<token>` in a browser loads the Jupyter Notebook dashboard page, where `hostname` is the name of the computer running docker and `token` is the secret token printed in the console.
 
+You can find the `python` folder under the `work` directory.
+
 ---
 ### [R](https://www.r-project.org/) [Environment](https://rstudio.github.io/renv/articles/renv.html)
 

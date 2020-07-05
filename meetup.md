@@ -23,6 +23,6 @@ On the file `data/sample_data_1.csv` you can find (dummy) `sales` data (`2018-01
 3. Is the feature `media` useful for prediction? 
 4. How do you evaluate model performance?
 
-Try to generate predictions for the whole month of July 2021. We will provide the "true" values during the meetup so that we can all test our models. Again, this is not a competition, but rather a concrete use case to apply what we learn about Prophet. 
+Try to generate predictions for the whole month of *July 2021*. We will provide the "true" values during the meetup so that we can all test our models. Again, this is not a competition, but rather a concrete use case to apply what we learn about Prophet. 
 
 Please bring questions and suggestions to make the best out of this session!

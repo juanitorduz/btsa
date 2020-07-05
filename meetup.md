@@ -14,14 +14,17 @@ In this section we want to track the Meet Up contents and information.
 
 <img src="images/sample_data_1_plot.png">
 
-We want to discuss the capabilities and limitations of Facebook’s forecasting package Prophet. We want to work a concrete example:
+**Moderator:** [Aaron Pickering](https://www.linkedin.com/in/aaron-p-87a139175/)
 
-On the file `data/sample_data_1.csv` you can find (dummy) `sales` data (`2018-01-01` to `2021-06-30`). In addition there is a feature `media` which could be used as an external predictor. The objective is to create a time series forecasting model using [Facebook Prophet](https://facebook.github.io/prophet/). The forecasting window is 30 days. Here are some hints for the challenge: 
+We want to discuss the capabilities and limitations of Facebook’s forecasting package *Prophet*. We want to work a concrete example:
+
+On the file `data/sample_data_1.csv` you can find (dummy) `sales` data (`2018-01-01` to `2021-06-30`). In addition there is a feature `media` which could be used as an external predictor. The objective is to create a time series forecasting model using [Facebook Prophet](https://facebook.github.io/prophet/). The forecasting window is 30 days. Here are some hints/steps for the challenge: 
 
 1. Do a EDA on the sample data. 
 2. Is there any clear seasonality or trend? 
 3. Is the feature `media` useful for prediction? 
 4. How do you evaluate model performance?
+5. Can you estimate model uncertainty (credible intervals)? 
 
 Try to generate predictions for the whole month of *July 2021*. We will provide the "true" values during the meetup so that we can all test our models. Again, this is not a competition, but rather a concrete use case to apply what we learn about Prophet. 
 

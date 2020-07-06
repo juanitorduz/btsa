@@ -20,7 +20,7 @@ We want to discuss the capabilities and limitations of Facebook’s forecasting 
 
 On the file `data/sample_data_1.csv` you can find (dummy) `sales` data (`2018-01-01` to `2021-06-30`). In addition there is a feature `media` which could be used as an external predictor. The objective is to create a time series forecasting model using [Facebook Prophet](https://facebook.github.io/prophet/). The forecasting window is 30 days. Here are some hints/steps for the challenge: 
 
-1. Do a EDA on the sample data. 
+1. Do an EDA on the sample data. 
 2. Is there any clear seasonality or trend? 
 3. Is the feature `media` useful for prediction? 
 4. How do you evaluate model performance?

@@ -49,7 +49,7 @@ As we want to make the code reproducible, here are some options to manage depend
 
 You can find the `python` folder under the `work` directory.
 
-We encourage everyone to [contribute to this repository](https://github.com/juanitorduz/btsa/blob/master/CONTRIBUTING.md))!
+We encourage everyone to [contribute to this repository](https://github.com/juanitorduz/btsa/blob/master/CONTRIBUTING.md)!
 
 ---
 ### [R](https://www.r-project.org/) [Environment](https://rstudio.github.io/renv/articles/renv.html)

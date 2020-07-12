@@ -1,6 +1,6 @@
 # Berlin Time Series Analysis (BTSA) Repository
 
-This repository contains resources of the *Berlin Time Series Analysis* [Meetup](https://www.meetup.com/Berlin-Time-Series-Analysis-Meetup/). We encourage everyone to [contribute to this repository](https://github.com/juanitorduz/btsa/blob/master/CONTRIBUTING.md)!
+This repository contains resources of the *Berlin Time Series Analysis* [Meetup](https://www.meetup.com/Berlin-Time-Series-Analysis-Meetup/). We encourage everyone to [contribute to this repository](https://github.com/juanitorduz/btsa/blob/master/CONTRIBUTING.md)! [Here](https://github.com/juanitorduz/btsa/blob/master/meetup.md) you can find the schedule and details of the meetup.
 
 <img src="python/fundamentals/images/basel_daily_gf.png">
 

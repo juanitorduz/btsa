@@ -1,6 +1,6 @@
 # Berlin Time Series Analysis (BTSA) Repository
 
-This repository contains resources of the *Berlin Time Series Analysis* [Meetup](https://www.meetup.com/Berlin-Time-Series-Analysis-Meetup/).
+This repository contains resources of the *Berlin Time Series Analysis* [Meetup](https://www.meetup.com/Berlin-Time-Series-Analysis-Meetup/). We encourage everyone to [contribute to this repository](https://github.com/juanitorduz/btsa/blob/master/CONTRIBUTING.md)!
 
 <img src="python/fundamentals/images/basel_daily_gf.png">
 
@@ -48,8 +48,6 @@ As we want to make the code reproducible, here are some options to manage depend
 > Visiting `http://<hostname>:10000/?token=<token>` in a browser loads the Jupyter Notebook dashboard page, where `hostname` is the name of the computer running docker and `token` is the secret token printed in the console.
 
 You can find the `python` folder under the `work` directory.
-
-We encourage everyone to [contribute to this repository](https://github.com/juanitorduz/btsa/blob/master/CONTRIBUTING.md)!
 
 ---
 ### [R](https://www.r-project.org/) [Environment](https://rstudio.github.io/renv/articles/renv.html)

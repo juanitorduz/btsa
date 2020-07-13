@@ -1,6 +1,6 @@
 # Berlin Time Series Analysis (BTSA) Repository
 
-This repository contains resources of the *Berlin Time Series Analysis* [Meetup](https://www.meetup.com/Berlin-Time-Series-Analysis-Meetup/).
+This repository contains resources of the *Berlin Time Series Analysis* [Meetup](https://www.meetup.com/Berlin-Time-Series-Analysis-Meetup/). We encourage everyone to [contribute to this repository](https://github.com/juanitorduz/btsa/blob/master/CONTRIBUTING.md)! [Here](https://github.com/juanitorduz/btsa/blob/master/meetup.md) you can find the schedule and details of the meetup.
 
 <img src="python/fundamentals/images/basel_daily_gf.png">
 
@@ -64,9 +64,3 @@ From the root directory type R and hit enter. Then type `renv::restore()` and re
 #### Option 2: From [RStudio](https://rstudio.com/)
 Open an Rstudio session. Go to `RStudio > 'Open Project in New Session'`. Navigate to the btsa folder and click open.
 In the console, type `renv::restore()` to install the necessary packages. Your RStudio session is now configured.
-
----
-## Contributing 
-We highly encourage to contribute to this repository! 
-  - If you find and error or have a specific request you can create an [Issue](https://guides.github.com/features/issues/).
-  - Add an analysis/experiment using a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 

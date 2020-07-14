@@ -36,6 +36,11 @@ sample_data.loc[0:30,'y_lag_31'] = 6.258472
 sample_data['seven_seven'] = sample_data['ds'].isin(["2018-07-07","2019-07-07","2020-07-07","2021-07-07"])
 sample_data['seven_seven'] = sample_data['seven_seven'].astype(int)
 
+# Add the structure break variable to the dataset
+struct_break = np.where(sample_data['ds'] ==  "2020-01-31")
+struct_break = np.concatenate([np.repeat(0, struct_break[-1]), np.repeat(1, sample_data.shape[0] - struct_break[-1])])
+sample_data['struct_break'] = struct_break
+
 # Split into training and test sets
 train_indices = np.where(~(sample_data['y'].isnull()))[-1]
 test_indices = np.where(sample_data['y'].isnull())[-1]
@@ -141,6 +146,7 @@ fit_plot.show()
 #  Seems to be a discontinuity at 2020-01.  Lets specifiy a change point at 2020-01 and assume liner otherwise.
 prophet_model = fbprophet.Prophet(changepoints=["2019-12-15","2020-03-01"], weekly_seasonality=False)
 prophet_model.add_seasonality("yearly", period=365.25, fourier_order=12, mode="multiplicative")
+prophet_model.add_regressor("struct_break")
 prophet_model.add_regressor("media")
 prophet_model.add_regressor("media_lag_1")
 prophet_model.add_regressor("media_lag_2")
@@ -153,6 +159,8 @@ fit_plot = prophet_model.plot(fit_xc)
 a = fbprophet.plot.add_changepoints_to_plot(fit_plot.gca(), prophet_model, fit_xc)
 fit_plot.show()
 
+prophet_model.plot_components(fit_xc)
+plt.show()
 plt.plot(fit_xc['multiplicative_terms'])
 plt.show()
 
@@ -162,10 +170,7 @@ plt.plot(train['ds'], res)
 plt.show()
 
 # The change is still not really picked up as seen  by the residuals. Add a dummy variable for the changepoint
-struct_break = np.where(train['ds'] ==  "2020-01-31")
-struct_break = np.concatenate([np.repeat(0, struct_break[-1]), np.repeat(1, train.shape[0] - struct_break[-1])])
 
-train['struct_break'] = struct_break
 
 # plot the dummy variable
 plt.plot(train['y'])

@@ -2,7 +2,6 @@ import numpy as np
 import fbprophet
 import pandas as pd
 import matplotlib.pyplot as plt
-import datascroller as scroller
 import sys
 import os
 import statsmodels.tsa.stattools as sm

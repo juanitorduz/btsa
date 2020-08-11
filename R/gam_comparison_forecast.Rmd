@@ -1,0 +1,141 @@
+---
+title: "GAM Comparison"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# Load the libraries
+library("tidyverse")
+library("mgcv")
+library("here")
+
+
+setwd(here::here())
+```
+
+## Load the sample data and add additional variables
+```{r}
+
+sample_data = read.csv("../data/sample_data_1.csv")
+
+plot(sample_data$sales, type="lines")
+
+```
+
+
+```{r}
+# Add a day of the year variable
+sample_data =  as_tibble(sample_data)
+sample_data$date = as.Date(sample_data$date)
+
+# Add day of the year and day of the week
+sample_data$day_of_year = lubridate::yday(sample_data$date)
+sample_data$day_of_week = lubridate::wday(sample_data$date)
+
+# Add an index variable to account for trend
+sample_data$index = c(1:nrow(sample_data))
+
+# Add media lag variables
+sample_data$media_lag_1 = lag(sample_data$media, 1)
+sample_data$media_lag_2 = lag(sample_data$media, 2)
+sample_data$media_lag_3 = lag(sample_data$media, 3)
+# Add an autocorrelation variable from the previous month
+sample_data$sales_lag_31 = lag(sample_data$sales, 31)
+```
+
+```{r}
+# Fill the lag NAs with the first genuine value
+sample_data$media_lag_1[is.na(sample_data$media_lag_1)] = 0
+sample_data$media_lag_2[is.na(sample_data$media_lag_2)] = 0
+sample_data$sales_lag_31[is.na(sample_data$sales_lag_31)] = 6.258472
+
+# Add the structural break
+sample_data$struct_break = ifelse(sample_data$date > as.Date("2020-01-31"), 1, 0)
+```
+
+```{r}
+# Convert day of the week to a factor variable
+sample_data$day_of_week = as.factor(sample_data$day_of_week)
+```
+
+```{r}
+# Add a dummy variable for the 7th of the 7th each year
+sample_data$july_seven = ifelse(as.character(sample_data$date) %in% c("2018-07-07","2019-07-07","2020-07-07","2021-07-07"), 1, 0)
+
+```
+
+```{r}
+# Split into train and test sets
+train = sample_data[!(is.na(sample_data$sales)),]
+test = sample_data[(is.na(sample_data$sales)),]
+```
+
+
+```{r}
+# Simple additive model
+gam_fit = mgcv::gam(sales ~ july_seven + media + media_lag_1 + media_lag_2 + media_lag_3  + s(day_of_year, k=12, bs="cc") + day_of_week + index + struct_break, data=train)
+
+```
+
+## Additive Model (Fit)
+```{r}
+plot(train$sales, type="lines")
+lines(predict(gam_fit), col="red")
+```
+
+## Multiplicative Model
+```{r}
+gam_fit = mgcv::gam(sales ~ media + media_lag_1 + media_lag_2 + july_seven + s(day_of_year,  k=12, bs="cc") + s(day_of_year, by=index, k=12, bs="cc") + index + struct_break, data=train)
+
+forecast = predict(gam_fit)
+
+plot(train$sales, type="lines")
+lines(forecast, col="red")
+```
+
+## Plot the forecast
+```{r}
+test_forecast = predict(gam_fit, newdata = test)
+
+# Plot the test set
+full_forecast = c(forecast, test_forecast)
+
+plot(sample_data$sales, type="lines")
+lines(full_forecast, col="red")
+
+```
+
+## Plot the components
+ 
+```{r}
+summary(gam_fit)
+```
+- Seasonality Component
+```{r}
+plot(gam_fit)
+```
+
+- Trend component
+```{r}
+plot((1:nrow(sample_data))*coef(gam_fit)[6] + coef(gam_fit)[1], type="lines", ylab="Trend")
+```
+
+- Media lag effect (alpha = 0.7?)
+```{r}
+plot(coef(gam_fit)[2:4], type="lines", ylab="Media Effect Size")
+```
+
+## Plot the error
+```{r}
+# Plot the test set
+full_forecast = c(forecast, test_forecast)
+
+error = sample_data$sales - full_forecast
+plot(error, type="lines")
+
+```
+
+```{r}
+hist(error)
+```
+

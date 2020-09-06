@@ -5,6 +5,9 @@
 - [Forecasting at Scale (Facebook Prophet)](https://peerj.com/preprints/3190.pdf)
 - [Gaussian Processes for Timeseries Modelling](http://www.robots.ox.ac.uk/~sjrob/Pubs/philTransA_2012.pdf)
 - [Neural forecasting: Introduction and Literature Overview, Amazon Research](https://arxiv.org/pdf/2004.10240.pdf)
+- [DeepAR: Probabilistic forecasting with autoregressive recurrent networks](https://www.sciencedirect.com/science/article/pii/S0169207019301888)
+- [Multi-variate Probabilistic Time Series Forecasting via Conditioned
+Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
 
 ## Books
 
@@ -41,5 +44,7 @@
 - [tensor-house (Introduction to Algorithmic Marketing)](https://github.com/ikatsov/tensor-house)
 - [SHAP](https://github.com/slundberg/shap)
 - [sktime](https://github.com/alan-turing-institute/sktime)- Python toolbox for machine learning with time series compatible with scikit-learn. 
+- [tsfresh](https://github.com/blue-yonder/tsfresh) - Time Series Feature extraction based on scalable hypothesis tests.
 
 ## Videos
+- [Gaussian Processes for Time Series Forecasting](https://www.youtube.com/watch?v=n42uQjhoS9g), [Second Symposium on Machine Learning and Dynamical Systems](http://www.fields.utoronto.ca/activities/20-21/dynamical) @Fields Institute, Juan Orduz

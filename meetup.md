@@ -51,7 +51,7 @@ with Time Series](http://learningsys.org/neurips19/assets/papers/sktime_ml_syste
 **Resources:**
 - [DeepAR: Probabilistic forecasting with autoregressive recurrent networks](https://www.sciencedirect.com/science/article/pii/S0169207019301888)
 
-## 03.10.2020 Multi-variate Probabilistic Time Series Forecasting via Conditioned Normalizing Flows
+## 03.11.2020 Multi-variate Probabilistic Time Series Forecasting via Conditioned Normalizing Flows
 
 **Speaker:** Kashif Rasul (Research Scientist @[Zalando SE](https://en.zalando.de/?_rfl=de))
 

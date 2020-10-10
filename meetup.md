@@ -46,7 +46,14 @@ with Time Series](http://learningsys.org/neurips19/assets/papers/sktime_ml_syste
 
 **Moderator:** Korbinian Kuusisto (Co-Founder @ Kineo.ai)
 
-**Abstract:** ... 
+**Abstract:** Probabilistic forecasting, i.e. estimating the probability distribution of a time series’ future given its past, is a key enabler for optimizing business processes. In retail businesses, for example, forecasting demand is crucial for having the right inventory available at the right time at the right place.
+
+The prevalent forecasting methods in use today have been developed in the setting of forecasting individual or small groups of time series. In this approach, model parameters for each given time series are independently estimated from past observations. The model is typically manually selected
+to account for different factors, such as autocorrelation structure, trend, seasonality, and other explanatory variables.
+
+However, especially in the demand forecasting domain, one is often faced with highly erratic, intermittent or bursty data which violate core assumptions of many classical techniques, such as Gaussian errors, stationarity, or homoscedasticity of the time series.
+
+Amazon's DeepAR is a forecasting method based on auto-regressive recurrent networks (LSTMs), which learns a global model from historical data of all time series in the data set. In their paper the authors demonstrate how by applying deep learning techniques to forecasting, one can overcome many of the challenges faced by widely-used classical approaches to the problem.
 
 **Resources:**
 - [DeepAR: Probabilistic forecasting with autoregressive recurrent networks](https://www.sciencedirect.com/science/article/pii/S0169207019301888)

@@ -44,7 +44,7 @@ with Time Series](http://learningsys.org/neurips19/assets/papers/sktime_ml_syste
 
 ## 13.10.2020 Amazon deepAR (Book Club)
 
-**Moderator:** Korbinian Kuusisto (Co-Founder @ Kineo.ai)
+**Moderator:** [Korbinian Kuusisto](https://kkuusisto.github.io/) (Co-Founder @ Kineo.ai)
 
 **Abstract:** Probabilistic forecasting, i.e. estimating the probability distribution of a time series’ future given its past, is a key enabler for optimizing business processes. In retail businesses, for example, forecasting demand is crucial for having the right inventory available at the right time at the right place.
 

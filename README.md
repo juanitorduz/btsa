@@ -24,11 +24,15 @@ As we want to make the code reproducible, here are some options to manage depend
 
 - [Create conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html):
 
-  `conda env create -f environment.yml`
+  `conda create -n btsa python=3.7`
 
 - Activate conda environment:
 
   `conda activate btsa`
+
+- Install Requirements:
+
+  `pip install -r requirements.txt`
 
 - Run [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/index.html#):
 

@@ -39,6 +39,7 @@ Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
 
 - [atspy](https://github.com/firmai/atspy) - Automated Time Series Models in Python.
 - [CausalImpact (Google)](https://github.com/google/CausalImpact)
+- [GluonTS - Probabilistic Time Series Modeling](https://github.com/awslabs/gluon-ts/)
 - [deep-learning-with-python-notebooks](https://github.com/fchollet/deep-learning-with-python-notebooks)
 - [deep-learning-with-r-notebooks](https://github.com/jjallaire/deep-learning-with-r-notebooks)
 - [tensor-house (Introduction to Algorithmic Marketing)](https://github.com/ikatsov/tensor-house)

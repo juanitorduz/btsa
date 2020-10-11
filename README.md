@@ -22,17 +22,13 @@ As we want to make the code reproducible, here are some options to manage depend
 
 ### Conda Environment (Python)
 
-- [Create conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html):
+- [Create conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) (you can also update the environment from as described [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#updating-an-environment)):
 
-  `conda create -n btsa python=3.7`
+  `conda env create -f environment.yml`
 
 - Activate conda environment:
 
   `conda activate btsa`
-
-- Install Requirements:
-
-  `pip install -r requirements.txt`
 
 - Run [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/index.html#):
 

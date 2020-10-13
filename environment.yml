@@ -5,7 +5,7 @@ channels:
 dependencies:
   - python=3.7
   - pip
-  - fbprophet==0.7.1
+  - fbprophet==0.6
   - jupyter==1.0.0
   - jupyterlab==2.2.8
   - matplotlib==3.3.1

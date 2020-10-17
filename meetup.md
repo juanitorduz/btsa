@@ -83,3 +83,9 @@ Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
 **Speaker:** Dr. Francesca Lazzeri
 
 **Abstract:** ...
+
+## 09.03.2021 TBA
+
+**Speaker:** Matthijs Brouns 
+
+**Abstract:** ...

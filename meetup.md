@@ -89,3 +89,9 @@ Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
 **Speaker:** Matthijs Brouns 
 
 **Abstract:** ...
+
+## XX.05.2021 Unsupervised Pre-Training of Audio with Wav2vec
+
+**Speaker:** Ritwika Mukherjee 
+
+**Abstract:** ...

@@ -66,17 +66,22 @@ Amazon's DeepAR is a forecasting method based on auto-regressive recurrent netwo
 
 **Speaker:** Dr. Kashif Rasul (Research Scientist @[Zalando SE](https://en.zalando.de/?_rfl=de))
 
-**Abstract:** ...
+**Abstract:**  I will present an overview of deep learning based probabilistic forecasting methods and then show how we can extend it to do multivariate probabilistic forecasting in an efficient manner by using Normalizing Flows. I will cover all the background material needed to understand these concepts as well so don't worry if you are new to them.
 
 **Resources:**
 - ArXiv: [Multi-variate Probabilistic Time Series Forecasting via Conditioned
 Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
 
-## XX.12.2020 Exploratory data analysis on time series data
+## 08.12.2020 Exploratory data analysis on time series data
 
-**Moderator:** Munji Choi
+<img src="python/fundamentals/images/beer_ma.png" height="400">
 
-**Descripton:...**
+**Moderator:** BTSA Organizers
+
+**Descripton:** We will have a hands on session on exploratory data analysis (EDA) for time series data. EDA depends of course on the data and the objective of the study. We will give some hints on how to start with it. Again, it is not set in stone, but a guiding principle.
+- Missing values and data frequency ([notebook](https://github.com/juanitorduz/btsa/blob/master/python/fundamentals/notebooks/eda_part_1_viz_and_missing_values.ipynb)).
+- Stationarity and correlation analysis ([notebook](https://github.com/juanitorduz/btsa/blob/master/python/fundamentals/notebooks/eda_part_2_correlations.ipynb)).
+- Seasonality, decomposition, and outlier detection ([notebook](https://github.com/juanitorduz/btsa/blob/master/python/fundamentals/notebooks/eda_part_3_decomposition.ipynb)).
 
 ## 09.02.2021 TBA
 

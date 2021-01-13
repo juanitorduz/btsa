@@ -83,11 +83,10 @@ Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
 - Stationarity and correlation analysis ([notebook](https://github.com/juanitorduz/btsa/blob/master/python/fundamentals/notebooks/eda_part_2_correlations.ipynb)).
 - Seasonality, decomposition, and outlier detection ([notebook](https://github.com/juanitorduz/btsa/blob/master/python/fundamentals/notebooks/eda_part_3_decomposition.ipynb)).
 
-## 09.02.2021 TBA
+## 09.02.2021 Azure Automated Machine Learning for Time Series Forecasting
 
-**Speaker:** Dr. Francesca Lazzeri
+**Speaker:** [Dr. Francesca Lazzeri](https://developer.microsoft.com/en-us/advocates/francesca-lazzeri)
 
-**Abstract:** ...
 
 ## 09.03.2021 TBA
 

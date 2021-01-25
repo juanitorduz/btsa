@@ -94,6 +94,12 @@ Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
 
 **Abstract:** ...
 
+## 13.04.2021 Rocket and MiniRocket: Fast time series classification using convolutional kernels
+
+**Speaker:** Angus Dempster
+
+**Abstract:** ...
+
 ## XX.05.2021 Unsupervised Pre-Training of Audio with Wav2vec
 
 **Speaker:** Ritwika Mukherjee 

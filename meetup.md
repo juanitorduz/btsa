@@ -88,12 +88,6 @@ Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
 **Speaker:** [Dr. Francesca Lazzeri](https://developer.microsoft.com/en-us/advocates/francesca-lazzeri)
 
 
-## 09.03.2021 TBA
-
-**Speaker:** Matthijs Brouns 
-
-**Abstract:** ...
-
 ## 13.04.2021 Rocket and MiniRocket: Fast time series classification using convolutional kernels
 
 **Speaker:** Angus Dempster

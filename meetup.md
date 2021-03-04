@@ -87,12 +87,24 @@ Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
 
 **Speaker:** [Dr. Francesca Lazzeri](https://developer.microsoft.com/en-us/advocates/francesca-lazzeri)
 
+**Resources:**
+
+- GitHub repository: https://github.com/FrancescaLazzeri/AutoML-for-Timeseries-Forecasting-Berlin-MeetUp
+- [Article](https://www.oreilly.com/content/3-reasons-to-add-deep-learning-to-your-time-series-toolkit/ ) around classical methods vs deep learning methods for time series forecasting.
+
 
 ## 13.04.2021 Rocket and MiniRocket: Fast time series classification using convolutional kernels
 
 **Speaker:** Angus Dempster
 
-**Abstract:** ...
+**Resources:** 
+
+- Paper Links:
+  - https://arxiv.org/abs/1910.13051 (ROCKET)
+  - https://arxiv.org/abs/2012.08791 (MINIROCKET)
+- GitHub repositories:
+  - https://github.com/angus924/rocket
+  - https://github.com/angus924/minirocket
 
 ## XX.05.2021 Unsupervised Pre-Training of Audio with Wav2vec
 

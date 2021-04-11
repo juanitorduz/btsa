@@ -111,3 +111,15 @@ Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
 **Speaker:** Ritwika Mukherjee 
 
 **Abstract:** ...
+
+## 08.06.2021 Introduction Causal Impact
+
+**Speaker:** Munji Choi
+
+**Abstract:** ...
+
+## XX.07.2021 TBA
+
+**Speaker:** Thomas Bierhance
+
+**Abstract:** ...

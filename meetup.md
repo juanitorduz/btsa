@@ -108,18 +108,18 @@ Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
 
 ## XX.05.2021 Unsupervised Pre-Training of Audio with Wav2vec
 
-**Speaker:** Ritwika Mukherjee 
+**Speaker:** [Ritwika Mukherjee](https://ritwika3.wixsite.com/mysite)
 
 **Abstract:** ...
 
-## 08.06.2021 Introduction Causal Impact
+## 08.06.2021 Introduction [CausalImpact](https://google.github.io/CausalImpact/)
 
-**Speaker:** Munji Choi
+**Speaker:** [Munji Choi](https://www.linkedin.com/in/munjichoi/)
 
 **Abstract:** ...
 
 ## XX.07.2021 TBA
 
-**Speaker:** Thomas Bierhance
+**Speaker:** [Thomas Bierhance](https://www.linkedin.com/in/datenzauberai/)
 
 **Abstract:** ...

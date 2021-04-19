@@ -106,7 +106,7 @@ Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
   - https://github.com/angus924/rocket
   - https://github.com/angus924/minirocket
 
-## XX.05.2021 Unsupervised Pre-Training of Audio with Wav2vec
+## 18.05.2021 Unsupervised Pre-Training of Audio with Wav2vec
 
 **Speaker:** [Ritwika Mukherjee](https://ritwika3.wixsite.com/mysite)
 

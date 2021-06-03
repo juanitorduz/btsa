@@ -113,6 +113,10 @@ Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
 **Abstract:** 
 Self-supervised methods for learning embedded feature spaces have increased in popularity over the last couple of years. These techniques allow for efficient representation learning despite complex high dimensional input spaces. In this session, we will explore the 'wav2vec' model developed by Facebook research and its applications in audio signal processing. The model has implications in speech, vastly reducing the need for annotated labels, and can be transferred across other time-series data.
 
+**Resources:**
+- [MeetUp Slides](/presentations/wave2vec/Wav2vec.pdf)
+- [Demo Notebook](/python/wave2vec/wav2vec_demo.ipynb)
+
 ## 15.06.2021 Introduction [CausalImpact](https://google.github.io/CausalImpact/)
 
 **Speaker:** [Munji Choi](https://www.linkedin.com/in/munjichoi/)

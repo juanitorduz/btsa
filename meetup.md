@@ -121,10 +121,8 @@ Self-supervised methods for learning embedded feature spaces have increased in p
 
 **Speaker:** [Munji Choi](https://www.linkedin.com/in/munjichoi/)
 
-**Abstract:** ...
-
-## XX.07.2021 TBA
+## 06.07.2021 Forecasting practitioners: What can we learn from Kaggle Competitions?
 
 **Speaker:** [Thomas Bierhance](https://www.linkedin.com/in/datenzauberai/)
 
-**Abstract:** ...
+**Abstract:** Although Kaggle contests are not directly comparable to a real-life task for a forecasting practitioner, the contests are closer to reality than many of the standard data sets found in the scientific literature. They are therefore a goldmine of practice-relevant ideas. Thomas explains the lessons learned from various Kaggle competitions, what needs to be considered when using them in practice, and what loose ends he believes still exist.

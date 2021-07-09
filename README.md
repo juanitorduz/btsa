@@ -2,6 +2,9 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/juanitorduz/btsa/master)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/juanitorduz/btsa)
 
+[![GitHub stars](https://img.shields.io/github/stars/juanitorduz/btsa.svg)](https://github.com/juanitorduz/btsa/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/juanitorduz/btsa.svg?color=blue)](https://github.com/juanitorduz/btsa/network)
+
 # Berlin Time Series Analysis (BTSA) Repository
 
 This repository contains resources of the *Berlin Time Series Analysis* [Meetup](https://www.meetup.com/Berlin-Time-Series-Analysis-Meetup/). We encourage everyone to [contribute to this repository](https://github.com/juanitorduz/btsa/blob/master/CONTRIBUTING.md)! [Here](https://github.com/juanitorduz/btsa/blob/master/meetup.md) you can find the schedule and details of the meetup.

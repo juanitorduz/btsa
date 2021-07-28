@@ -121,6 +121,9 @@ Self-supervised methods for learning embedded feature spaces have increased in p
 
 **Speaker:** [Munji Choi](https://www.linkedin.com/in/munjichoi/)
 
+**Resources**
+- [Notebook & Data](/python/CausalImpact)
+
 ## 06.07.2021 Forecasting practitioners: What can we learn from Kaggle Competitions?
 
 **Speaker:** [Thomas Bierhance](https://www.linkedin.com/in/datenzauberai/)
@@ -129,3 +132,11 @@ Self-supervised methods for learning embedded feature spaces have increased in p
 
 **Resources**
 - [Presentation](presentations/forecast_kaggle_tips/Forecast%20practitioners%20What%20can%20we%20learn%20from%20Kaggle%20competitions.pdf)
+
+## XX.10.2021 TBA
+
+**Speaker**: Oleksandr
+
+## 07.12.2021 TBA
+
+**Speaker:** [Alexandre Andorra](https://twitter.com/alex_andorra)

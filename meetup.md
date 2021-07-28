@@ -133,6 +133,19 @@ Self-supervised methods for learning embedded feature spaces have increased in p
 **Resources**
 - [Presentation](presentations/forecast_kaggle_tips/Forecast%20practitioners%20What%20can%20we%20learn%20from%20Kaggle%20competitions.pdf)
 
+## 07.09.2021 Introduction to Time Series Forecasting: Classical Statistical Methods
+
+**Abstract:** In this session we will explore three classical time series forecasting methods:
+
+  - Exponential Smoothing (Aaron Pickering)
+  - ARIMA Models (Sebastian Martinez)
+  - State Space Models (Juan Orduz)
+
+We will have 20 min session for each method focusing on explaining the main idea behind it through examples. No prior knowledge is required.
+
+Recommended reference: Forecasting: Principles and Practice
+by Rob J Hyndman and George Athanasopoulos: (https://otexts.com/fpp3/)[https://otexts.com/fpp3/] Chapters 8 and 9.
+
 ## XX.10.2021 TBA
 
 **Speaker**: Oleksandr

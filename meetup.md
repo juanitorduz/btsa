@@ -144,7 +144,7 @@ Self-supervised methods for learning embedded feature spaces have increased in p
 We will have 20 min session for each method focusing on explaining the main idea behind it through examples. No prior knowledge is required.
 
 Recommended reference: Forecasting: Principles and Practice
-by Rob J Hyndman and George Athanasopoulos: (https://otexts.com/fpp3/)[https://otexts.com/fpp3/] Chapters 8 and 9.
+by Rob J Hyndman and George Athanasopoulos: [https://otexts.com/fpp3/](https://otexts.com/fpp3/) Chapters 8 and 9.
 
 ## XX.10.2021 TBA
 

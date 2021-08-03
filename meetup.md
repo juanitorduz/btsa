@@ -148,11 +148,11 @@ by Rob J Hyndman and George Athanasopoulos: [https://otexts.com/fpp3/](https://o
 
 ## XX.10.2021 TBA
 
-**Speaker**: [Dr. Fiammetta Menchetti](https://scholar.google.com/citations?user=o1dMQ88AAAAJ&hl=it)
+**Speaker**: Oleksandr
 
 ## 06.11.2021 TBA
 
-**Speaker**: Oleksandr
+**Speaker**: [Dr. Fiammetta Menchetti](https://scholar.google.com/citations?user=o1dMQ88AAAAJ&hl=it)
 
 ## 07.12.2021 TBA
 

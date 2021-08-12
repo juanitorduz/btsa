@@ -66,26 +66,94 @@ Amazon's DeepAR is a forecasting method based on auto-regressive recurrent netwo
 
 **Speaker:** Dr. Kashif Rasul (Research Scientist @[Zalando SE](https://en.zalando.de/?_rfl=de))
 
-**Abstract:** ...
+**Abstract:**  I will present an overview of deep learning based probabilistic forecasting methods and then show how we can extend it to do multivariate probabilistic forecasting in an efficient manner by using Normalizing Flows. I will cover all the background material needed to understand these concepts as well so don't worry if you are new to them.
 
 **Resources:**
 - ArXiv: [Multi-variate Probabilistic Time Series Forecasting via Conditioned
 Normalizing Flows](https://arxiv.org/pdf/2002.06103.pdf)
 
-## XX.12.2020 Exploratory data analysis on time series data
+## 08.12.2020 Exploratory data analysis on time series data
 
-**Moderator:** Munji Choi
+<img src="python/fundamentals/images/beer_ma.png" height="400">
 
-**Descripton:...**
+**Moderator:** BTSA Organizers
 
-## 09.02.2021 TBA
+**Descripton:** We will have a hands on session on exploratory data analysis (EDA) for time series data. EDA depends of course on the data and the objective of the study. We will give some hints on how to start with it. Again, it is not set in stone, but a guiding principle.
+- Missing values and data frequency ([notebook](https://github.com/juanitorduz/btsa/blob/master/python/fundamentals/notebooks/eda_part_1_viz_and_missing_values.ipynb)).
+- Stationarity and correlation analysis ([notebook](https://github.com/juanitorduz/btsa/blob/master/python/fundamentals/notebooks/eda_part_2_correlations.ipynb)).
+- Seasonality, decomposition, and outlier detection ([notebook](https://github.com/juanitorduz/btsa/blob/master/python/fundamentals/notebooks/eda_part_3_decomposition.ipynb)).
 
-**Speaker:** Dr. Francesca Lazzeri
+## 09.02.2021 Azure Automated Machine Learning for Time Series Forecasting
 
-**Abstract:** ...
+**Speaker:** [Dr. Francesca Lazzeri](https://developer.microsoft.com/en-us/advocates/francesca-lazzeri)
 
-## 09.03.2021 TBA
+**Resources:**
 
-**Speaker:** Matthijs Brouns 
+- GitHub repository: https://github.com/FrancescaLazzeri/AutoML-for-Timeseries-Forecasting-Berlin-MeetUp
+- [Article](https://www.oreilly.com/content/3-reasons-to-add-deep-learning-to-your-time-series-toolkit/ ) around classical methods vs deep learning methods for time series forecasting.
 
-**Abstract:** ...
+
+## 13.04.2021 Rocket and MiniRocket: Fast time series classification using convolutional kernels
+
+**Speaker:** Angus Dempster
+
+**Resources:** 
+
+- Paper Links:
+  - https://arxiv.org/abs/1910.13051 (ROCKET)
+  - https://arxiv.org/abs/2012.08791 (MINIROCKET)
+- GitHub repositories:
+  - https://github.com/angus924/rocket
+  - https://github.com/angus924/minirocket
+
+## 18.05.2021 Unsupervised Pre-Training of Audio with Wav2vec
+
+**Speaker:** [Ritwika Mukherjee](https://ritwika3.wixsite.com/mysite)
+
+**Abstract:** 
+Self-supervised methods for learning embedded feature spaces have increased in popularity over the last couple of years. These techniques allow for efficient representation learning despite complex high dimensional input spaces. In this session, we will explore the 'wav2vec' model developed by Facebook research and its applications in audio signal processing. The model has implications in speech, vastly reducing the need for annotated labels, and can be transferred across other time-series data.
+
+**Resources:**
+- [MeetUp Slides](/presentations/wave2vec/Wav2vec.pdf)
+- [Demo Notebook](/python/wave2vec/wav2vec_demo.ipynb)
+
+## 15.06.2021 Introduction [CausalImpact](https://google.github.io/CausalImpact/)
+
+**Speaker:** [Munji Choi](https://www.linkedin.com/in/munjichoi/)
+
+**Resources**
+- [Notebook & Data](/python/CausalImpact)
+
+## 06.07.2021 Forecasting practitioners: What can we learn from Kaggle Competitions?
+
+**Speaker:** [Thomas Bierhance](https://www.linkedin.com/in/datenzauberai/)
+
+**Abstract:** Although Kaggle contests are not directly comparable to a real-life task for a forecasting practitioner, the contests are closer to reality than many of the standard data sets found in the scientific literature. They are therefore a goldmine of practice-relevant ideas. Thomas explains the lessons learned from various Kaggle competitions, what needs to be considered when using them in practice, and what loose ends he believes still exist.
+
+**Resources**
+- [Presentation](presentations/forecast_kaggle_tips/Forecast%20practitioners%20What%20can%20we%20learn%20from%20Kaggle%20competitions.pdf)
+
+## 07.09.2021 Introduction to Time Series Forecasting: Classical Statistical Methods
+
+**Abstract:** In this session we will explore three classical time series forecasting methods:
+
+  - Exponential Smoothing (Aaron Pickering)
+  - ARIMA Models (Sebastian Martinez)
+  - State Space Models (Juan Orduz)
+
+We will have 20 min session for each method focusing on explaining the main idea behind it through examples. No prior knowledge is required.
+
+Recommended reference: Forecasting: Principles and Practice
+by Rob J Hyndman and George Athanasopoulos: [https://otexts.com/fpp3/](https://otexts.com/fpp3/) Chapters 8 and 9.
+
+## XX.10.2021 TBA
+
+**Speaker**: Oleksandr
+
+## 06.11.2021 TBA
+
+**Speaker**: [Dr. Fiammetta Menchetti](https://scholar.google.com/citations?user=o1dMQ88AAAAJ&hl=it)
+
+## 07.12.2021 TBA
+
+**Speaker:** [Alexandre Andorra](https://twitter.com/alex_andorra)

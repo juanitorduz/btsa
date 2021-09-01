@@ -1,11 +1,20 @@
 ![Build](https://github.com/juanitorduz/btsa/workflows/Docker%20Build/badge.svg)
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/juanitorduz/btsa/master)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/juanitorduz/btsa)
 
 [![GitHub stars](https://img.shields.io/github/stars/juanitorduz/btsa.svg)](https://github.com/juanitorduz/btsa/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/juanitorduz/btsa.svg?color=blue)](https://github.com/juanitorduz/btsa/network)
 
+[![Visits Badge](https://badges.pufler.dev/visits/juanitorduz/btsa)](https://github.com/juanitorduz/btsa)
+[![Updated Badge](https://badges.pufler.dev/updated/juanitorduz/btsa)](https://github.com/juanitorduz/btsa)
+[![Contributors](https://img.shields.io/github/contributors/juanitorduz/btsa)](https://github.com/juanitorduz/btsa)
+
 # Berlin Time Series Analysis (BTSA) Repository
+
+<p align="center">
+      <img src="https://www.vectorlogo.zone/logos/meetup/meetup-ar21.svg" alt="code" width="300"/>
+</p>
 
 This repository contains resources of the *Berlin Time Series Analysis* [Meetup](https://www.meetup.com/Berlin-Time-Series-Analysis-Meetup/). We encourage everyone to [contribute to this repository](https://github.com/juanitorduz/btsa/blob/master/CONTRIBUTING.md)! [Here](https://github.com/juanitorduz/btsa/blob/master/meetup.md) you can find the schedule and details of the meetup.
 

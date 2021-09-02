@@ -6,9 +6,9 @@
 [![GitHub stars](https://img.shields.io/github/stars/juanitorduz/btsa.svg)](https://github.com/juanitorduz/btsa/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/juanitorduz/btsa.svg?color=blue)](https://github.com/juanitorduz/btsa/network)
 
-[![Visits Badge](https://badges.pufler.dev/visits/juanitorduz/btsa)](https://github.com/juanitorduz/btsa)
-[![Updated Badge](https://badges.pufler.dev/updated/juanitorduz/btsa)](https://github.com/juanitorduz/btsa)
-[![Contributors](https://img.shields.io/github/contributors/juanitorduz/btsa)](https://github.com/juanitorduz/btsa)
+[![Visits Badge](https://badges.pufler.dev/visits/juanitorduz/btsa)](https://badges.pufler.dev/visits/juanitorduz/btsa)
+[![Updated Badge](https://badges.pufler.dev/updated/juanitorduz/btsa)](https://badges.pufler.dev/updated/juanitorduz/btsa)
+[![Contributors](https://img.shields.io/github/contributors/juanitorduz/btsa)](https://img.shields.io/github/contributors/juanitorduz/btsa)
 
 # Berlin Time Series Analysis (BTSA) Repository
 

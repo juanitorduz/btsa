@@ -148,7 +148,7 @@ by Rob J Hyndman and George Athanasopoulos: [https://otexts.com/fpp3/](https://o
 
 ## XX.10.2021 Neural Temporal Point Processes
 
-**Speaker**: Oleksandr Shchur
+**Speaker**: [Oleksandr Shchur](https://scholar.google.de/citations?user=np39q6IAAAAJ&hl=en)
 
 ## 06.11.2021 Using ARIMA models to make causal statements
 

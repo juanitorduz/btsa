@@ -146,9 +146,9 @@ We will have 20 min session for each method focusing on explaining the main idea
 Recommended reference: Forecasting: Principles and Practice
 by Rob J Hyndman and George Athanasopoulos: [https://otexts.com/fpp3/](https://otexts.com/fpp3/) Chapters 8 and 9.
 
-## XX.10.2021 TBA
+## XX.10.2021 Neural Temporal Point Processes
 
-**Speaker**: Oleksandr
+**Speaker**: [Oleksandr Shchur](https://scholar.google.de/citations?user=np39q6IAAAAJ&hl=en)
 
 ## 06.11.2021 Using ARIMA models to make causal statements
 

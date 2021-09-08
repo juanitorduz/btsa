@@ -135,6 +135,8 @@ Self-supervised methods for learning embedded feature spaces have increased in p
 
 ## 07.09.2021 Introduction to Time Series Forecasting: Classical Statistical Methods
 
+<img src="python/intro_forecasting/images/unobserved_components_predictions.png">
+
 **Abstract:** In this session we will explore three classical time series forecasting methods:
 
   - Exponential Smoothing (Aaron Pickering)
@@ -145,6 +147,8 @@ We will have 20 min session for each method focusing on explaining the main idea
 
 Recommended reference: Forecasting: Principles and Practice
 by Rob J Hyndman and George Athanasopoulos: [https://otexts.com/fpp3/](https://otexts.com/fpp3/) Chapters 8 and 9.
+
+You can find the notebooks of the session [here](/python/intro_forecasting/).
 
 ## 12.10.2021 Neural Temporal Point Processes
 

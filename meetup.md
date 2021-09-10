@@ -148,7 +148,7 @@ We will have 20 min session for each method focusing on explaining the main idea
 Recommended reference: Forecasting: Principles and Practice
 by Rob J Hyndman and George Athanasopoulos: [https://otexts.com/fpp3/](https://otexts.com/fpp3/) Chapters 8 and 9.
 
-You can find the notebooks of the session [here](/python/intro_forecasting/).
+You can find the notebooks of the session [here](/python/intro_forecasting/). In addition here is a summary article on [Introduction to Exponential Smoothing](https://btsa.medium.com/introduction-to-exponential-smoothing-9c2d5909a714).
 
 ## 12.10.2021 Neural Temporal Point Processes
 

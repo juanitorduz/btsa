@@ -21,6 +21,8 @@ This repository contains resources of the *Berlin Time Series Analysis* [Meetup]
 
 **contact:** [berlin.timeseries.analysis@gmail.com](berlin.timeseries.analysis@gmail.com)
 
+You can also visit us on [Medium](https://btsa.medium.com/).
+
 ---
 ## Code of Conduct 
 **Important:** Make sure you read the [Code of Conduct](https://github.com/juanitorduz/btsa/blob/master/code_of_conduct.md). 

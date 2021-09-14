@@ -163,3 +163,9 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 ## 07.12.2021 TBA
 
 **Speaker:** [Alexandre Andorra](https://twitter.com/alex_andorra)
+
+## XX.02.2022 Time Series Bootstraping
+
+**Speaker:** [Tom Kealy](https://github.com/TomKealy)
+
+**Abstract:** TBD

@@ -150,9 +150,11 @@ by Rob J Hyndman and George Athanasopoulos: [https://otexts.com/fpp3/](https://o
 
 You can find the notebooks of the session [here](/python/intro_forecasting/). In addition, here is a summary article on [Introduction to Exponential Smoothing](https://btsa.medium.com/introduction-to-exponential-smoothing-9c2d5909a714).
 
-## 12.10.2021 Neural Temporal Point Processes
+## 12.10.2021 Temporal Point Processes for Modeling Continuous-time Event Data
 
 **Speaker**: [Oleksandr Shchur](https://scholar.google.de/citations?user=np39q6IAAAAJ&hl=en)
+
+**References:** [Neural Temporal Point Processes: A Review](https://arxiv.org/abs/2104.03528)
 
 ## 06.11.2021 Using ARIMA models to make causal statements
 

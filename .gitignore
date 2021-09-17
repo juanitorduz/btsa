@@ -137,4 +137,11 @@ dmypy.json
 
 #vscode
 .vscode
+
+# RStudio
 .Rproj.user
+.RData
+.Rhistory
+.Rapp.history
+.Renviron
+*.nb.html

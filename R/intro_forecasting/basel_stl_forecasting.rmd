@@ -1,0 +1,125 @@
+---
+title: "Introduction to STL Forecasting"
+output: html_notebook
+---
+
+In this notebook we present a [decomposition model](https://fabletools.tidyverts.org/reference/decomposition_model.html) that combines STL (Seasonal and Trend decomposition using Loess) and ETS/ARIMA with [tidyverts](https://tidyverts.org/). From the documentation:
+
+> This function allows you to specify a decomposition combination model using any additive decomposition. It works by first decomposing the data using the decomposition method provided to dcmp_fn with the given formula. Secondary models are used to fit each of the components from the resulting decomposition.
+
+For more details see Forecasting: [Principles and Practice, Section 3.6 STL Decomposition](https://otexts.com/fpp3/stl.html).
+
+```{r}
+library(readr)
+library(dplyr)
+library(lubridate)
+library(ggplot2)
+library(fable)
+library(feasts)
+library(stringr)
+options(dplyr.summarise.inform=F) 
+```
+
+# Read Data
+
+We will use the Basel temperature data set.
+
+```{r}
+raw_df <- read_csv('../../data/basel_weather.csv')
+```
+
+# EDA
+
+```{r}
+data_df <- raw_df %>%
+  rename(temperature    = `Basel Temperature [2 m elevation corrected]`,
+         precipitation  = `Basel Precipitation Total`,
+         wind_speed     = `Basel Wind Speed [10 m]`,
+         wind_direction = `Basel Wind Direction [10 m]`) %>%
+  mutate(date      = date(timestamp),
+         year      = year(timestamp),
+         month     = month(timestamp),
+         day       = day(timestamp),
+         dayofyear = yday(timestamp),
+         hour      = hour(timestamp))
+
+daily_data_df <- data_df %>%
+  group_by(date, year, month, day, dayofyear) %>%
+  summarise(temperature = mean(temperature)) %>%
+  as_tsibble(index=date)
+
+daily_data_df %>% head()
+```
+
+```{r}
+autoplot(daily_data_df, temperature) +
+  labs(title='Basel Temperature (Daily)', y=expression(degree*C))
+```
+The time series contains a strong seasonal component.
+
+```{r}
+daily_data_df %>% gg_season(temperature)
+```
+We check the decomposition of the time series using STL.
+
+```{r}
+daily_data_df %>% 
+  model(STL(temperature ~ season(period = 365, window = Inf))) %>% 
+  components() %>% 
+  autoplot()
+```
+
+# Train-Test Split
+
+```{r}
+train_test_cut_date <- as_date('2019-01-01')
+
+df_train <- daily_data_df %>% filter(date < train_test_cut_date)
+df_test <- daily_data_df %>% filter(date >= train_test_cut_date)
+
+daily_data_df %>%
+  mutate(data_set = if_else(date < train_test_cut_date, 'train', 'test')) %>%
+  ggplot(aes(x=date, y=temperature, color=data_set)) +
+  geom_line() +
+  labs(title='Basel Temperature (Daily)', y=expression(degree*C)) +
+  geom_vline(xintercept = train_test_cut_date, linetype = "longdash")
+```
+# Model Fit
+
+We fit an exponential smoothing and an ARIMA model to the seasonal adjusted time series.
+
+```{r}
+fit <- df_train %>%
+  model(
+    stl_arima = decomposition_model(
+      STL(temperature ~ season(period = 365, window = Inf)),
+      ARIMA(season_adjust ~ 0 + pdq(2, 1, 1) + PDQ(0, 0, 0))
+    ),
+    stl_ets =  decomposition_model(
+      STL(temperature ~ season(period = 365, window = Inf)),
+      ETS(season_adjust ~ season("N"))
+    )
+  )
+```
+
+# Generate Forecast
+
+```{r}
+fc <- fit %>%
+  forecast(h = nrow(df_test))
+```
+
+```{r}
+error <- fc %>% accuracy(df_test)
+
+rmse_arima <- error %>% filter(.model=="stl_arima") %>% pull(RMSE)
+rmse_ets <- error %>% filter(.model=="stl_ets") %>% pull(RMSE)
+```
+
+```{r}
+fc %>% autoplot(df_test, level=c()) +
+  labs(title='Basel Temperature (Daily)', y=expression(degree*C)) +
+  scale_color_discrete(labels = c(stl_arima = str_interp("STL+ARIMA rmse = $[.2f]{rmse_arima}"),
+                                  stl_ets = str_interp("STL+ETS rmse = $[.2f]{rmse_ets}")))
+```
+

@@ -1,0 +1,152 @@
+---
+title: "Introduction To Exponential Smoothing"
+output: html_notebook
+---
+
+Loading packages and set up the notebook.
+
+```{r}
+library(readr)
+library(dplyr)
+library(tibble)
+library(ggplot2)
+library(fable)
+```
+
+Load sample data (prepared earlier).
+
+```{r}
+df <- read_csv("../../data/intro_ets.csv") %>%
+  rowid_to_column("id") %>%
+  as_tsibble(index=id)
+df %>% head()
+```
+
+# Simple Exponential Smoothing
+
+Formula for simple exponential smoothing...
+
+\begin{align}
+s_t &= \alpha x_t + (1-\alpha) s_{t-1} \\
+    &= \alpha x_t + (1-\alpha)(\alpha x_{t-1} + (1-\alpha) s_{t-2}) \\
+    &= \alpha x_t + (1-\alpha) \alpha x_{t-1} + (1-\alpha)^2 s_{t-2}
+\end{align}
+
+Lets now try out simple exponential smoothing on a time series
+
+```{r}
+df %>% autoplot(t1)
+```
+Train the model with arbitrary smoothing_level (alpha) parameter:
+
+```{r}
+fit <- df %>%
+  model(
+    ETS(t1 ~ trend("N", alpha=0.2) + season("N"))
+  )
+```
+
+The plot below shows the original time series and the backfit exponential smoothing values. Adjusting the alpha parameter controls the smoothness. Values of alpha near 1 put larger weights on more recent values. Values of alpha near 0 put larger weights on older values and hence we get a smoother fit.
+
+```{r}
+fit %>%
+  augment() %>%
+  pivot_longer(c(t1, .fitted)) %>%
+  ggplot(aes(x=id, y=value, colour=name)) +
+  geom_line()
+```
+Now lets look at the forecast:
+
+```{r}
+fit %>%
+  forecast(h=20) %>%
+  autoplot(df)
+```
+What happens when we try it on a a series with a trend?
+
+```{r}
+df %>% autoplot(t2)
+```
+```{r}
+df %>%
+  model(
+    ETS(t2 ~ trend("N", alpha=0.2) + season("N"))
+  ) %>%
+  forecast(h=20) %>%
+  autoplot(df)
+```
+# Double Exponential Smoothing
+
+\begin{align}
+s_t &= \alpha x_t + (1-\alpha)(s_{t-1} + b_{t-1}) \\
+b_t &= \beta (s_t-s_{t-1}) + (1-\beta) b_{t-1}
+\end{align}
+
+```{r}
+df %>%
+  model(
+    ETS(t2 ~ trend("A", alpha=0.5, beta=0.5) + season("N"))
+  ) %>%
+  forecast(h=20) %>%
+  autoplot(df)
+```
+Ok, that works on simple series, but what if we want to exploit a known seasonal pattern?
+
+```{r}
+df %>% autoplot(t3)
+```
+# Triple Exponential Smoothing
+
+Add in a another formula to account for periodic cycles!
+
+Triple Exponential Smoothing (Additive)
+
+\begin{align}
+s_0 &= x_0 \\
+s_t &= \alpha(x_t - c_{t-L})+(1-\alpha)(s_{t-1}+b_{t-1}) \\
+b_t &= \beta(s_t - s_{t-1}) + (1-\beta)b_{t-1} \\
+c_t &= \gamma(x_t - s_{t-1} - b_{t-1}) + (1 - \gamma)c_{t-L} \\
+F_{t+m} &= s_t + mb_t + c_{t-L+1+(m-1) \bmod L} \\
+\end{align}
+
+```{r}
+df %>%
+  model(
+    ETS(t3 ~ trend("A", alpha=0.4, beta=0.01) + season("A", period=20, gamma=0.2))
+  ) %>%
+  forecast(h=20) %>%
+  autoplot(df)
+```
+# Exponential Growth
+
+```{r}
+df %>% autoplot(t4)
+```
+```{r}
+df %>%
+  model(
+    ETS(t4 ~ trend("M", alpha=0.6, beta=0.5) + season("N"))
+  ) %>%
+  forecast(h=20, times=100) %>%
+  autoplot(df)
+```
+# Choosing alpha, beta, gamma automatically
+
+The fable package can find the best parameters of alpha, beta and gamma via backfitting. Once you have chosen the appropriate model above, then this a great option to get a baseline.
+
+```{r}
+fit <- df %>%
+  model(
+    ETS(t3 ~ trend("A") + season("A", period=20))
+  )
+fit %>% coef()
+```
+
+```{r}
+fit %>%
+  forecast(h=20) %>%
+  autoplot(df)
+```
+ 
+ 
+ 

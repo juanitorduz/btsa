@@ -1,0 +1,177 @@
+---
+title: "Auto-regressive integrated moving average models"
+output: html_notebook
+---
+
+```{r}
+library(dplyr)
+library(lubridate)
+library(tidyr)
+library(climate)
+library(fable)
+library(feasts)
+library(tsibble)
+library(rsample)
+options(dplyr.summarise.inform=F) 
+```
+
+
+# Introduction
+
+ARIMA stands for Auto-Regressive Integrated Moving Average. Let's go through each one of these concepts one by one.
+
+## Auto-regressive
+
+$$y_t = c + \rho_1 y_{t-1} + \rho_2 y_{t-2} + e_t$$
+
+The autoregressive part of the model assumes that the best way to explain the current value in a time series is using a set number of the past observations. In this case, we are looking at a AR(2) model, and $\rho_1$ and $\rho_2$ are the parameters of interest for the model.
+
+## Moving average
+
+The moving average component assumes that the best explanation for a time series is the error term of the previous values in the series:
+
+$$y_t = c + \mu_1 e_{t-1} + \mu_1 e_{t-2} + e_t$$
+
+This would be a MA(2) model, and $\mu_1$ and $\mu_2$ are the parameters of interest of the model.
+
+## Integrated
+
+This value determines the amount of times we differentiate the series ($y_t-y_{t-1}$) for the AR and MA models above.
+
+The final equation depends on the integrated term. For more information on the functional form of the seasonal ARIMA, please check the fable documentation.
+
+The parameters we are going to use below are $p$ for the AR component, $d$ for the integrated component, and $q$ for the MA component.
+
+# Data processing
+
+For this tutorial we are going to use the CO2 data available in the climate package.
+
+```{r}
+data <- climate::meteo_noaa_co2() %>% select(yy, mm, co2_avg) %>% filter(yy < 2003)
+data %>% head(25)
+```
+We would like to reorganize the data set in monthly data.
+
+```{r}
+y <- data %>%
+  group_by(year_month = yearmonth(ISOdate(yy, mm, 1))) %>%
+  summarize(co2 = mean(co2_avg)) %>%
+  as_tsibble()
+```
+There are no missing months, but if there were, we would fill them like this...
+
+```{r}
+y <- y %>%
+  fill_gaps() %>%
+  fill(co2)
+```
+
+```{r}
+autoplot(y)
+```
+```{r}
+y %>%
+  features(co2, unitroot_kpss)
+```
+```{r}
+y %>%
+  mutate(diff_co2 = difference(co2)) %>% 
+  features(diff_co2, unitroot_kpss)
+```
+```{r}
+y %>%
+  mutate(diff_co2 = difference(co2)) %>%
+  autoplot(diff_co2)
+```
+# Grid search
+
+Since we have little information about the data generating process that generates the data we are going to study, we can use a grid search to determine the set of parameters that best explains the data using a simple metric: the Akaike Information Criteria.
+
+The AIC is a tool we use to measure the performance of a model. By itself it does not really provide much information, but it shines when it is used to compare two or more models.
+
+```{r}
+y %>%
+  model(ARIMA(co2 ~ 0 + pdq(0, 1, 1) + PDQ(0, 0, 0))) %>%
+  report()
+```
+
+```{r}
+y %>%
+  mutate(diff_co2 = difference(co2)) %>%
+  model(ARIMA(diff_co2 ~ 0 + pdq(0, 0, 1) + PDQ(0, 0, 0))) %>%
+  report()
+```
+```{r}
+y %>%
+  model(ARIMA(co2 ~ 0 + pdq(0:2, 0:2, 0:2) + PDQ(0, 0, 0), ic="aic")) %>%
+  report()
+```
+
+According to this calculation, ARIMA(2,1,1) is the best performing model in terms of AIC out of the set of possible parameters analyzed.
+
+```{r}
+y %>%
+  model(ARIMA(co2 ~ 0 + pdq(2, 1, 1) + PDQ(0, 0, 0))) %>%
+  coef()
+```
+
+```{r}
+split <- initial_time_split(y, 0.9)
+
+fit <- training(split) %>%
+  model(ARIMA(co2 ~ 0 + pdq(2, 1, 1) + PDQ(0, 0, 0)))
+
+fc <- fit %>%
+  forecast(h = nrow(testing(split)))
+```
+
+```{r}
+fc %>% accuracy(testing(split))
+```
+```{r}
+fc %>% autoplot(testing(split))
+```
+The forecast is not great, primarily because our model does not take into consideration the clearly seasonal model of the data.
+
+We can expand this experiment by allowing a seasonal component to be added to the modeling. With long and clearly seasonal data sets like this one, it might generate better results.
+
+# Seasonal ARIMA
+
+We can include a seasonal component to the estimation of the time series to incorporate the typical monthly behavior not included in traditional ARIMA analysis.
+
+
+```{r}
+y %>%
+  model(ARIMA(co2 ~ 0 + pdq(0:2, 0:2, 0:2) + PDQ(0:1, 0:1, 0:1), ic="aic")) %>%
+  report()
+```
+```{r}
+y %>%
+  model(ARIMA(co2 ~ 0 + pdq(0, 1, 1) + PDQ(1, 1, 1))) %>%
+  coef()
+```
+
+```{r}
+fit <- training(split) %>%
+  model(ARIMA(co2 ~ 0 + pdq(0, 1, 1) + PDQ(1, 1, 1)))
+
+fc <- fit %>%
+  forecast(h = nrow(testing(split)))
+```
+
+```{r}
+fc %>% accuracy(testing(split))
+```
+
+```{r}
+fc %>% autoplot(testing(split))
+```
+# Some notes
+
+* This notebook tries to mimic the python version, however there are some differences.
+  * in theory the data set is the same (CO2 Mauna Loa (NOAA)), but in practice it is a bit different
+  * this notebook uses the KPSS test instead of the ADF test.
+  * the optimal seasonal ARIMA in this notebook has a non-seasonal component that is not auto-regressive ($p=0$).
+* We determined the best model using the AIC. There are other target functions you can use to choose your $p$, $d$, and $q$ parameters. One possibility is the mean square error between the predicted values given a set of parameters, and the test set.
+* An alternative way to check whether we have the right set of parameters is to check the ACF of the errors.
+* We must not forget to check whether the chosen parameters to explain our model fit our understanding of the underlying data.

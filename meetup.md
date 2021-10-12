@@ -152,11 +152,17 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 ## 12.10.2021 Temporal Point Processes for Modeling Continuous-time Event Data
 
-**Speaker**: [Oleksandr Shchur](https://scholar.google.de/citations?user=np39q6IAAAAJ&hl=en)
+**Speaker**: [Oleksandr Shchur](https://shchur.github.io/)
 
-**References:** 
-  - [Neural Temporal Point Processes: A Review](https://arxiv.org/abs/2104.03528)
+**References:**
   - [MeetUp Presentation](/presentations/temporal_point_processes/tpp_presentation.pdf)
+  - [Neural Temporal Point Processes: A Review](https://arxiv.org/abs/2104.03528)
+  - Blog post from [Oleksandr Shchur](https://shchur.github.io/):
+    - [Temporal Point Processes 1: The Conditional Intensity Function](https://shchur.github.io/blog/2020/tpp1-conditional-intensity/)
+    - [Temporal Point Processes 2: Neural TPP Models](https://shchur.github.io/blog/2021/tpp2-neural-tpps/)
+  - Python packages related to TPP:
+    - [tick](https://x-datainitiative.github.io/tick/)
+    - [pyhawkes](https://github.com/slinderman/pyhawkes)
 
 ## 06.11.2021 Using ARIMA models to make causal statements
 

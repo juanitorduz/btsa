@@ -164,7 +164,7 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
     - [tick](https://x-datainitiative.github.io/tick/)
     - [pyhawkes](https://github.com/slinderman/pyhawkes)
 
-## 06.11.2021 Using ARIMA models to make causal statements
+## 09.11.2021 Using ARIMA models to make causal statements
 
 **Speaker**: [Dr. Fiammetta Menchetti](https://scholar.google.com/citations?user=o1dMQ88AAAAJ&hl=it)
 

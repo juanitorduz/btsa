@@ -154,7 +154,9 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 **Speaker**: [Oleksandr Shchur](https://scholar.google.de/citations?user=np39q6IAAAAJ&hl=en)
 
-**References:** [Neural Temporal Point Processes: A Review](https://arxiv.org/abs/2104.03528)
+**References:** 
+  - [Neural Temporal Point Processes: A Review](https://arxiv.org/abs/2104.03528)
+  - [MeetUp Presentation](/presentations/temporal_point_processes/tpp_presentation.pdf)
 
 ## 06.11.2021 Using ARIMA models to make causal statements
 

@@ -170,10 +170,6 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 **Abstract:**  In this talk we will provide an overview of C-ARIMA, an approach based on ARIMA models that can be used to make causal statements under the potential outcomes framework. After a brief description of the methodology, we will have a practical session on a real data set where we will illustrate the use of the CausalArima R package, see [FMenchetti/CausalArima](https://github.com/FMenchetti/CausalArima).
 
-## 07.12.2021 TBA
-
-**Speaker:** [Alexandre Andorra](https://twitter.com/alex_andorra)
-
 ## XX.02.2022 Time Series Bootstraping
 
 **Speaker:** [Tom Kealy](https://github.com/TomKealy)

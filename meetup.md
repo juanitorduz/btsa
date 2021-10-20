@@ -175,3 +175,9 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 **Speaker:** [Tom Kealy](https://github.com/TomKealy)
 
 **Abstract:** TBD
+
+## XX.03.2022 TBA
+
+**Speaker:** [Flavio Morelli](https://flaviomorelli.com/)
+
+**Abstract:** TBD

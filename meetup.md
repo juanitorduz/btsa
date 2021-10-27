@@ -172,12 +172,18 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 ## XX.02.2022 Time Series Bootstraping
 
-**Speaker:** [Tom Kealy](https://github.com/TomKealy)
+**Speaker:** [Dr. Tom Kealy](https://github.com/TomKealy)
 
 **Abstract:** TBD
 
 ## XX.03.2022 TBA
 
 **Speaker:** [Flavio Morelli](https://flaviomorelli.com/)
+
+**Abstract:** TBD
+
+## 05.04.2022 TBA
+
+**Speaker:** [Dr. Sean Law](https://seanlaw.github.io/)
 
 **Abstract:** TBD

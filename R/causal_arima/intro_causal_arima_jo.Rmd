@@ -42,8 +42,8 @@ The suggested R package is `CausalArima`, you can install the development versio
 GitHub with
 
 ```{r}
-install.packages("devtools")
-devtools::install_github("FMenchetti/CausalArima")
+# install.packages("devtools")
+# devtools::install_github("FMenchetti/CausalArima")
 ```
 
 ## Prepare Notebook
@@ -185,12 +185,16 @@ ce$model$coef
 
     4.  Assume a multiplicative effect, how much more did the product sold due to the
         permanent price reduction?
+        
+Let us denote by $y_{i}$ and $\hat{y}_{i}$ the observed and the forecasted time series of the arima model. Hence, the *causal effect* is given by:
 
 $$
-ce_{i} = \log(\hat{y}_{i}) - \log(y_{i}) = \log\left(\frac{\hat{y}_{i}}{y_{i}}\right) 
+ce_{i} = \log(y_{i}) - \log(\hat{y}_{i}) = \log\left(\frac{y_{i}}{\hat{y}_{i}}\right) 
 $$
+Therefore 
+
 $$
-\exp(ce_{i}) = \frac{\hat{y}_{i}}{y_{i}}
+\exp(ce_{i}) = \frac{y_{i}}{\hat{y}_{i}}  \Longrightarrow \hat{y}_{i} = \frac{y_{i}}{\exp(ce_{i})}
 $$
 
 
@@ -199,7 +203,11 @@ multiplicative_causal_effect <- ce$causal.effect  %>% exp()
 
 price_changed_data_df <- data_df %>% 
   filter(price_change) %>% 
-  mutate(multiplicative_causal_effect = multiplicative_causal_effect)
+  mutate(
+    multiplicative_causal_effect = multiplicative_causal_effect,
+    sales_estimated_no_price_change = Sales / multiplicative_causal_effect,
+    causal_effect = Sales - sales_estimated_no_price_change
+  )
 
 ggplot(data = price_changed_data_df) +
   geom_line(mapping = aes(x = Dates, y = multiplicative_causal_effect), color = "purple") +
@@ -207,7 +215,6 @@ ggplot(data = price_changed_data_df) +
 ```
 ```{r}
 causal_effect <- price_changed_data_df %>%
-  mutate(causal_effect = Sales / multiplicative_causal_effect) %>% 
   summarise(causal_effect = sum(causal_effect, na.rm = TRUE)) %>% 
   pull(causal_effect)
 ```

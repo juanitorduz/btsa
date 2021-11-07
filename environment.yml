@@ -28,4 +28,6 @@ dependencies:
     - pytorchts==0.5.1
     - ipywidgets==7.6.3
     - bambi==0.6.0
-    - pycausalimpact==0.1.1
+    - tfcausalimpact
+    - tensorflow
+    - tensorflow-probability

@@ -1,0 +1,260 @@
+---
+title: "Causal Arima Intro"
+editor_options:
+  markdown:
+    wrap: 88
+---
+
+## Excercise
+
+On October 4, 2018 the Florence branch of an Italian supermarket chain introduced a
+price policy change on several store-brand products by permanently reducing their price.
+Your goal is to estimate the causal effect of the price policy change on the sales of
+one of the addressed products.
+
+-   Data
+
+The data set includes the daily sales of one product from September 2017 to April 2019,
+its price and information on national holidays and already built-in day-of-the-week
+dummies.
+
+Dates : vector of dates Sales : time series of daily sales counts (number of units sold)
+TruePrice : the true unit price of the product Price : the new unit price series, set to
+a constant value in the post-intervention period hol : holiday dummy taking value 1
+before and after a national Italian holiday dec.sun : dummy taking value 1 on December
+Sundays sat--thr : day-of-the-week dummies
+
+-   Questions
+
+    1.  What is the total number of units sold due to the price reduction after 1-week,
+        1 month and 3 months from the intervention?
+
+    2.  What is the total number of units sold at the end of the analysis period?
+
+    3.  Plot the causal effect and residual diagnostics
+
+    4.  Assume a multiplicative effect, how much more did the product sold due to the
+        permanent price reduction?
+
+-   R Package
+
+The suggested R package is `CausalArima`, you can install the development version from
+GitHub with
+
+```{r}
+# install.packages("devtools")
+# devtools::install_github("FMenchetti/CausalArima")
+```
+
+## Prepare Notebook
+
+```{r}
+library("CausalArima")
+library("tidyverse")
+```
+
+## Read Data
+
+```{r}
+raw_data_df <- read_csv(file = "../../data/btsa-causalarima_2021-11-02_2033/dataset.csv")
+
+raw_data_df %>% head()
+```
+
+## EDA
+
+```{r}
+data_df <- raw_data_df %>% 
+  mutate(
+    price_change =  (TruePrice != Price),
+    days_since_price_change = cumsum(as.numeric(price_change))
+  )
+```
+
+```{r}
+# date on which prices changed
+price_change_date <- data_df %>%
+  filter(price_change) %>%
+  pull(Dates) %>%
+  min()
+```
+
+```{r}
+ggplot(data=data_df) +
+  geom_line(mapping = aes(x = Dates, y = Sales), color="black") +
+  geom_vline(xintercept = price_change_date, color = "red", linetype="dashed") +
+  ggtitle(label = "Daily Sales")
+```
+
+```{r}
+ggplot(data=data_df) +
+  geom_line(mapping = aes(x = Dates, y = TruePrice,  color="TruePrice")) +
+  geom_line(mapping = aes(x = Dates, y = Price, color="Price")) +
+  geom_vline(xintercept = price_change_date, color = "black", linetype="dashed") +
+  scale_color_brewer(palette="Set1") +
+  labs(title="Price over time", color="price") 
+```
+
+## Answers
+
+    1.  What is the total number of units sold due to the price
+        reduction after 1-week, 1 month and 3 months from the
+        intervention?
+
+```{r}
+compute_sales_after_price_change <- function ( .df , day_window ) {
+  
+  .df_filtered <- .df %>% filter(price_change & days_since_price_change <= day_window)
+  
+  sales_day_window <- .df_filtered %>% 
+    summarise(Sales = sum(Sales, na.rm = TRUE)) %>% 
+    pull(Sales)
+  
+  return( sales_day_window )
+}
+
+compute_sales_after_price_change(.df = data_df, day_window = 7)
+```
+
+```{r}
+day_windows <- c(7, 30, 90, 120, 180)
+
+tibble(
+  day_windows = day_windows,
+  sales = day_windows %>% map_dbl(function (x) compute_sales_after_price_change(.df = data_df, day_window = x))
+) %>% 
+ggplot() + 
+  geom_line(mapping = aes(x = day_windows, y = sales), color="blue") +
+  geom_point(mapping = aes(x = day_windows, y = sales), color="blue") +
+  labs(title="Sales since price change")
+
+```
+
+    2.  What is the total number of units sold at the end of the
+        analysis period?
+
+```{r}
+total_number_sold_end <- compute_sales_after_price_change(
+  .df = data_df,
+  day_window = (data_df %>% filter(price_change) %>% nrow())
+)
+
+total_number_sold_end
+```
+
+    3.  Plot the causal effect and residual diagnostics
+
+```{r}
+ggplot(data=data_df) +
+  geom_line(mapping = aes(x = Dates, y = log(Sales)), color="black") +
+  geom_vline(xintercept = price_change_date, color = "red", linetype="dashed") +
+  ggtitle(label = "Daily Sales - Log Scale")
+```
+
+
+```{r}
+
+y <- ts(data =(data_df %>% pull(Sales)), frequency = 1)
+log_y <- log(y)
+dates <- data_df %>% pull(Dates)
+x_reg <- data_df %>% select(hol, dec.sun, sat, sun, mon, tue, wed, thr)
+
+ce <- CausalArima(
+  y = log_y, 
+  auto = TRUE,
+  dates = dates,
+  int.date = price_change_date, 
+  xreg = x_reg 
+)
+```
+
+```{r}
+forecasted <- plot(ce, type = "forecast")
+
+forecasted
+```
+
+```{r}
+impact_p <- plot(ce, type  ="impact")
+
+grid.arrange(impact_p$plot, impact_p$cumulative_plot)
+```
+```{r}
+ce$model$coef
+```
+
+    4.  Assume a multiplicative effect, how much more did the product sold due to the
+        permanent price reduction?
+        
+Let us denote by $y_{i}$ and $\hat{y}_{i}$ the observed and the forecasted time series of the arima model. Hence, the *causal effect* is given by:
+
+$$
+ce_{i} = \log(y_{i}) - \log(\hat{y}_{i}) = \log\left(\frac{y_{i}}{\hat{y}_{i}}\right) 
+$$
+Therefore 
+
+$$
+\exp(ce_{i}) = \frac{y_{i}}{\hat{y}_{i}}  \Longrightarrow \hat{y}_{i} = \frac{y_{i}}{\exp(ce_{i})}
+$$
+
+
+```{r}
+multiplicative_causal_effect <- ce$causal.effect  %>% exp()
+
+price_changed_data_df <- data_df %>% 
+  filter(price_change) %>% 
+  mutate(
+    multiplicative_causal_effect = multiplicative_causal_effect,
+    sales_estimated_no_price_change = Sales / multiplicative_causal_effect,
+    causal_effect = Sales - sales_estimated_no_price_change
+  )
+
+ggplot(data = price_changed_data_df) +
+  geom_line(mapping = aes(x = Dates, y = multiplicative_causal_effect), color = "purple") +
+  labs(title = "Multiplicative Causal Effect From C-ARIMA Model")
+```
+```{r}
+causal_effect <- price_changed_data_df %>%
+  summarise(causal_effect = sum(causal_effect, na.rm = TRUE)) %>% 
+  pull(causal_effect)
+```
+
+```{r}
+print(glue::glue(
+"In the change of price period there were {total_number_sold_end} from where we estimate {round(causal_effect)} were caused by the price change. This accounts for {round( 100 * causal_effect / total_number_sold_end, digits=2)}% of the sales during this period."
+))
+```
+
+---
+
+## Compare with CausalImpact
+
+```{r}
+library("CausalImpact")
+
+ci_data <- data_df %>% 
+  mutate(Sales = log(Sales)) %>% 
+  dplyr::select(Sales, hol, dec.sun, sat, sun, mon, tue, wed, thr) %>% 
+  fill(Sales, .direction = "down")
+
+pre_period <- c(1, data_df %>% dplyr::filter(price_change) %>% pull(Index) %>% first() - 1)
+
+post_period <-  c(pre_period[2] + 1, data_df %>% pull(Index) %>% last())
+
+
+ci <- CausalImpact(
+  data = zoo(ci_data),
+  pre.period = pre_period,
+  post.period = post_period
+)
+
+summary(ci)
+```
+
+```{r}
+plot(ci)
+```
+```{r}
+plot(exp(ci$series$point.effect))
+```
+

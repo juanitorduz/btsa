@@ -166,7 +166,7 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 ## 09.11.2021 Using ARIMA models to make causal statements
 
-**Speaker**: [Dr. Fiammetta Menchetti](https://scholar.google.com/citations?user=o1dMQ88AAAAJ&hl=it)
+**Speaker**: [Dr. Fiammetta Menchetti](https://scholar.google.com/citations?user=o1dMQ88AAAAJ&hl=it) and [Eugenio Palmieri](https://palmierieugenio.github.io/)
 
 **Abstract:**  In this talk we will provide an overview of C-ARIMA, an approach based on ARIMA models that can be used to make causal statements under the potential outcomes framework. After a brief description of the methodology, we will have a practical session on a real data set where we will illustrate the use of the CausalArima R package, see [FMenchetti/CausalArima](https://github.com/FMenchetti/CausalArima).
 

@@ -170,11 +170,13 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 **Abstract:**  In this talk we will provide an overview of C-ARIMA, an approach based on ARIMA models that can be used to make causal statements under the potential outcomes framework. After a brief description of the methodology, we will have a practical session on a real data set where we will illustrate the use of the CausalArima R package, see [FMenchetti/CausalArima](https://github.com/FMenchetti/CausalArima).
 
-## XX.02.2022 Time Series Bootstraping
+## 15.02.2022 Time Series Bootstrapping
 
 **Speaker:** [Dr. Tom Kealy](https://github.com/TomKealy)
 
-**Abstract:** TBD
+**Speaker:** Dr. Tom Kealy, Senior Data Scientist at HelloFresh
+
+**Abstract:** Bootstrapping is a common non-parametric technique which uses resampling with replacement to estimate the distribution of a test statistic. Fatally, for time series methods, bootstrapping relies on the exchangeability of data points for statistical analysis consistency. This talk will introduce methods for bootstrapping time series data, with a particular focus on the Maximum Entropy Bootstrap family of algorithms to estimate distributions of test statistics for time series data.
 
 ## XX.03.2022 TBA
 

@@ -189,3 +189,9 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 **Speaker:** [Dr. Sean Law](https://seanlaw.github.io/)
 
 **Abstract:** TBD
+
+## XX.05.2022 TBA
+
+**Speaker:** [Dr. Jethro Browell](http://www.jethrobrowell.com/)
+
+**Abstract:** TBD

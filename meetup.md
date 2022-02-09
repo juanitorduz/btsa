@@ -178,7 +178,7 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 **Abstract:** Bootstrapping is a common non-parametric technique which uses resampling with replacement to estimate the distribution of a test statistic. Fatally, for time series methods, bootstrapping relies on the exchangeability of data points for statistical analysis consistency. This talk will introduce methods for bootstrapping time series data, with a particular focus on the Maximum Entropy Bootstrap family of algorithms to estimate distributions of test statistics for time series data.
 
-## XX.03.2022 TBA
+## 15.03.2022 TBA
 
 **Speaker:** [Flavio Morelli](https://flaviomorelli.com/)
 

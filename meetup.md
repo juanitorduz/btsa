@@ -178,11 +178,17 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 **Abstract:** Bootstrapping is a common non-parametric technique which uses resampling with replacement to estimate the distribution of a test statistic. Fatally, for time series methods, bootstrapping relies on the exchangeability of data points for statistical analysis consistency. This talk will introduce methods for bootstrapping time series data, with a particular focus on the Maximum Entropy Bootstrap family of algorithms to estimate distributions of test statistics for time series data.
 
-## 15.03.2022 TBA
+## 15.03.2022 An Introduction to temporal GNNs
 
 **Speaker:** [Flavio Morelli](https://flaviomorelli.com/)
 
-**Abstract:** TBD
+**Abstract:** Graph Neural Networks (GNNs) make it possible to apply deep learning methods to graph data. By taking into account the geometric structure of the graph, it is possible to improve model performance compared to more classical methods of graph analysis. Some examples of data that have a natural graph structure include knowledge graphs, chemical compounds, social and telecommunication networks. However, classical GNNs can only be applied to static graphs. This talk will introduce temporal GNNs, which can be applied to graphs changing through time. We will discuss the different flavors of temporal GNNs and the specific challenges that arise when dealing with dynamic graphs. 
+
+**References:**
+
+- [Rozemberczki et al. (2021)](https://arxiv.org/pdf/2104.07788.pdf)
+- [Rossi et al. (2020)](https://arxiv.org/pdf/2104.07788.pdf)
+
 
 ## 05.04.2022 TBA
 

@@ -201,3 +201,9 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 **Speaker:** [Dr. Jethro Browell](http://www.jethrobrowell.com/)
 
 **Abstract:** TBD
+
+## 14.06.2022 TBA
+
+**Speaker:** [Federico Garza] (Co-founder: https://github.com/Nixtla/nixtla)
+
+**Abstract:** TBD

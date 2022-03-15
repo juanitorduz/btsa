@@ -186,6 +186,8 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 **References:**
 
+- **Slides:** [Here](https://github.com/flaviomorelli/talks/blob/main/temporal_gnn_introduction/GNN_intro_plus_temporal.pdf)
+
 - [Rozemberczki et al. (2021)](https://arxiv.org/pdf/2104.07788.pdf)
 - [Rossi et al. (2020)](https://arxiv.org/pdf/2104.07788.pdf)
 

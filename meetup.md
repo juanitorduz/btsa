@@ -178,7 +178,7 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 **Abstract:** Bootstrapping is a common non-parametric technique which uses resampling with replacement to estimate the distribution of a test statistic. Fatally, for time series methods, bootstrapping relies on the exchangeability of data points for statistical analysis consistency. This talk will introduce methods for bootstrapping time series data, with a particular focus on the Maximum Entropy Bootstrap family of algorithms to estimate distributions of test statistics for time series data.
 
-## 15.03.2022 An Introduction to temporal GNNs
+## 15.03.2022 An Introduction to Temporal GNNs
 
 **Speaker:** [Flavio Morelli](https://flaviomorelli.com/)
 
@@ -190,11 +190,11 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 - [Rossi et al. (2020)](https://arxiv.org/pdf/2104.07788.pdf)
 
 
-## 05.04.2022 TBA
+## 05.04.2022 Modern Time Series Analysis with [STUMPY](https://stumpy.readthedocs.io/en/latest/) 
 
 **Speaker:** [Dr. Sean Law](https://seanlaw.github.io/)
 
-**Abstract:** TBD
+**Abstract:** [STUMPY](https://stumpy.readthedocs.io/en/latest/) is a powerful and scalable Python library that efficiently computes something called the matrix profile which can be used for a variety of time series data mining tasks. In this talk, we'll cover all of the background necessary for understanding how to leverage matrix profiles to automatically find patterns/anomalies in your time series data.
 
 ## XX.05.2022 TBA
 
@@ -204,6 +204,6 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 ## 14.06.2022 TBA
 
-**Speaker:** [Federico Garza] (Co-founder: https://github.com/Nixtla/nixtla)
+**Speaker:** Federico Garza (Co-founder: https://github.com/Nixtla/nixtla)
 
 **Abstract:** TBD

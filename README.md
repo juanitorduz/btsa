@@ -1,7 +1,7 @@
 ![Build](https://github.com/juanitorduz/btsa/workflows/Docker%20Build/badge.svg)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/juanitorduz/btsa/master)
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/juanitorduz/btsa)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/juanitorduz/btsa)
 
 [![GitHub stars](https://img.shields.io/github/stars/juanitorduz/btsa.svg)](https://github.com/juanitorduz/btsa/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/juanitorduz/btsa.svg?color=blue)](https://github.com/juanitorduz/btsa/network)

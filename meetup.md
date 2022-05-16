@@ -204,7 +204,7 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 **Abstract:** Energy systems are evolving rapidly as they decarbonize, consequences of which include an increasing dependence on weather and new consumer (and producer) behaviours. As a result, all actors in the energy sector are more reliant than ever on short-term forecasts, from the National Grid to me and (maybe) you. Furthermore, in operate as economically as possible and maintain high standards of reliability, forecast uncertainty must be quantified and managed. This seminar will introduce energy forecasting, highlight statistical challenges in this area, and present some recent solutions including forecasting extreme quantiles and modelling time-varying covariance structures.
 
-## 14.06.2022 TBA
+## 14.06.2022 Open Source Time-Series Forecasting
 
 **Speaker:** Federico Garza (Co-founder: https://github.com/Nixtla/nixtla)
 

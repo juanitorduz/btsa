@@ -209,3 +209,13 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 **Speaker:** Federico Garza (Co-founder: https://github.com/Nixtla/nixtla)
 
 **Abstract:** TBD
+
+## 07. 2022 - Taking a break for summer 
+
+**Speaker:** Work Life Balance 
+
+## 13.09.2022 TBD
+
+**Speaker** Aaron Pickering (Co-founder http://seenly.io)
+
+**Abstract:** TBD

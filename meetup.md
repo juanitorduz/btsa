@@ -214,7 +214,7 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 **Speaker:** Work Life Balance 
 
-## 13.09.2022 TBD
+## 13.09.2022 TBD **[POSTPONED]**
 
 **Speaker** Aaron Pickering (Co-founder http://seenly.io)
 

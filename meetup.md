@@ -208,7 +208,7 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 
 **Speaker:** Federico Garza (Co-founder: https://github.com/Nixtla/nixtla)
 
-**Abstract:** TBD
+**Abstract:** Open source time series forecasting with the Nixtla library.
 
 ## 07. 2022 - Taking a break for summer 
 
@@ -219,3 +219,22 @@ You can find the notebooks of the session [here](/python/intro_forecasting/). In
 **Speaker** Aaron Pickering (Co-founder http://seenly.io)
 
 **Abstract:** TBD
+
+## 08.11.2022 Intro to QuestDB Time Series Database
+
+**Speaker** Javier Ramirez (https://es.linkedin.com/in/ramirez)
+
+**Abstract** Time Series forecasting and modelling is fun, but capturing time-series data and dealing with large volume datasets not so much.
+In this talk we will introduce QuestDB, an Apache 2.0 licensed database specialised in time-series. We will see how QuestDB can help ingesting, interactively querying, downsampling or augmenting your data. Since QuestDB is postgreSql-compatible, we can interact easily using python with or without Pandas. We will run a demo using QuestDB and skforecast to illustrate how QuestDB can be integrated to your data science workflows.
+
+## 10.01.2023 Uncertainty Estimation in Time Series with Neural Processes
+
+**Speaker** Xuesong Wang (https://xuesongwang.github.io/)
+
+**Abstract** TBD
+
+## 07.02.2023 Tenuous Relations and Time Series Analysis in PyMC
+
+**Speaker** Nathaniel Forde
+
+**Abstract** We'll discuss the nature of lagged impact between multiple time series and sketch some details about how we can implement and use VAR models and their hierarchical variants to quantify the nature of these relationships.
